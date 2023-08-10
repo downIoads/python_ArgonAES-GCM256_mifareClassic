@@ -7,7 +7,6 @@ from getpass import getpass
 
 
 def GetArgonHash(masterPassword, customSalt):
-    
     # get argon2 hash (dangerous low_level needed to use custom salt!), hash_len 23 for AES256
     hash = low_level.hash_secret(secret=masterPassword, salt=customSalt, time_cost=3, memory_cost=65536, parallelism=4, hash_len=23, type=Type.ID, version=19)
     # type ID means e.g. Argon2id (which is a hybrid of Argon2i and Argon2d)
@@ -88,9 +87,8 @@ def EncryptMain():
 def DecryptMain():
     AES_Decrypt()
 
-
-# EncryptMain()
-DecryptMain()
+EncryptMain()
+# DecryptMain()
 
 '''
 Usage (just comment the one you currently do not need out):
