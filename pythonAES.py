@@ -35,7 +35,7 @@ def AES_Encrypt(encryptionPassword, customSalt, data):
 
 def AES_Decrypt():
     masterPassword = getpass("Enter password: ").encode()
-    customSalt = input("\nEnter salt hex in capslock without spaces (e.g. AABBCCDDEEFFGGHHIIJJKKLLMMNNOOPP): ").encode()
+    customSalt = input("\nEnter salt hex in capslock without spaces (e.g. AABBCCDDEEFFAABBCCDDEEFFAABBCCDD): ").encode()
     tag = bytes.fromhex(input("Enter tag hex: "))
     ciphertext = bytes.fromhex(input("Enter encrypted message hex: "))
     
